@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Market Dashboard PRD</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
+        h1, h2, h3 { color: #2c3e50; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        table, th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Product Requirements Document (PRD)</h1>
+    <h2>Stock Market Dashboard (Version 1)</h2>
+
+    <h3>1. Overview</h3>
+    <p>The Stock Market Dashboard is a <strong>web-based application</strong> developed using <strong>Streamlit</strong> that provides users with real-time stock data. It fetches stock prices using the <strong>Yahoo Finance API (yfinance)</strong> and allows users to track and visualize stock performance.</p>
+
+    <h3>2. Objectives</h3>
+    <ul>
+        <li>Enable users to monitor real-time stock prices for popular companies.</li>
+        <li>Provide a user-friendly interface for selecting and viewing stock data.</li>
+        <li>Allow users to download and store stock data for future reference.</li>
+    </ul>
+
+    <h3>3. Key Features</h3>
+    <h4>3.1 Stock Data Retrieval</h4>
+    <ul>
+        <li>Users can select from a <strong>predefined list of stock tickers</strong> (e.g., Apple, Microsoft, Google, Amazon, Tesla, Nvidia).</li>
+        <li>Users can <strong>add custom stock tickers</strong> to monitor additional stocks.</li>
+        <li>The application fetches <strong>real-time stock prices and historical data</strong> using the Yahoo Finance API.</li>
+    </ul>
+
+    <h4>3.2 Data Visualization</h4>
+    <ul>
+        <li>Display of <strong>stock performance charts</strong> with historical data.</li>
+        <li>Interactive charts showing stock trends over different time periods.</li>
+        <li>Ability to compare multiple stocks on the same graph.</li>
+    </ul>
+
+    <h4>3.3 Data Persistence</h4>
+    <ul>
+        <li>Saves stock data to a local <strong>JSON file</strong> for later use.</li>
+        <li>Ensures data is retrievable upon subsequent app launches.</li>
+        <li>Provides an option to <strong>export data</strong> in CSV format.</li>
+    </ul>
+
+    <h3>4. User Personas</h3>
+    <h4>4.1 Retail Investor</h4>
+    <p><strong>Goal:</strong> Track stock market performance for investment decisions.<br>
+    <strong>Pain Points:</strong> Needs easy access to stock data without complex trading platforms.</p>
+
+    <h4>4.2 Financial Analyst</h4>
+    <p><strong>Goal:</strong> Analyze stock trends and historical performance.<br>
+    <strong>Pain Points:</strong> Requires clean, structured data for financial reports.</p>
+
+    <h4>4.3 Casual User</h4>
+    <p><strong>Goal:</strong> Stay informed on market movements for popular stocks.<br>
+    <strong>Pain Points:</strong> Prefers an easy-to-use dashboard over technical tools.</p>
+
+    <h3>5. Functional Requirements</h3>
+    <table>
+        <tr><th>Requirement ID</th><th>Description</th></tr>
+        <tr><td>V1-REQ-001</td><td>The system must allow users to select stocks from a predefined list.</td></tr>
+        <tr><td>V1-REQ-002</td><td>Users should be able to add custom stock tickers.</td></tr>
+        <tr><td>V1-REQ-003</td><td>The application must fetch real-time stock prices using the Yahoo Finance API.</td></tr>
+        <tr><td>V1-REQ-004</td><td>Stock performance must be visualized using interactive charts.</td></tr>
+        <tr><td>V1-REQ-005</td><td>Users must be able to download stock data as a CSV file.</td></tr>
+        <tr><td>V1-REQ-006</td><td>The application must save stock data to a local JSON file for future use.</td></tr>
+    </table>
+
+    <h3>6. Non-Functional Requirements</h3>
+    <ul>
+        <li>The dashboard should be lightweight and load stock data within <strong>3 seconds</strong>.</li>
+        <li>The UI should be responsive and function on <strong>desktop and mobile browsers</strong>.</li>
+        <li>The system should handle <strong>API rate limits gracefully</strong> without breaking functionality.</li>
+    </ul>
+
+    <h3>7. Acceptance Criteria</h3>
+    <table>
+        <tr><th>User Story ID</th><th>User Story</th><th>Acceptance Criteria</th></tr>
+        <tr><td>V1-REQ-001-01</td><td>As a user, I want to select stocks from a predefined list so that I can quickly track my favorite stocks.</td><td>Test that the predefined list of stocks is displayed and selectable.</td></tr>
+        <tr><td>V1-REQ-002-01</td><td>As a user, I want to add custom stock tickers so that I can track other stocks of interest.</td><td>Test that users can manually input and add stock symbols to the list.</td></tr>
+        <tr><td>V1-REQ-003-01</td><td>As a user, I want to view real-time stock prices so that I can stay updated on market trends.</td><td>Test that stock prices update correctly based on the latest market data.</td></tr>
+    </table>
+
+    <h3>8. Open Questions</h3>
+    <ul>
+        <li>Should we support additional data sources besides Yahoo Finance?</li>
+        <li>Do we need authentication for saving user preferences?</li>
+        <li>Should there be an option to set <strong>price alerts</strong> for stocks?</li>
+    </ul>
+
+    <h3>9. Appendices</h3>
+    <h4>Appendix A: Original Code</h4>
+    <p><em>(Raw script content available upon request)</em></p>
+
+    <h4>Appendix B: Unformatted User Stories & Acceptance Criteria</h4>
+    <p><em>(Available upon request for easy copying & pasting)</em></p>
+</body>
+</html>

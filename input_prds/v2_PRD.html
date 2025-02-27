@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Requirements Document (PRD) - Stock Market Dashboard V2</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        h1, h2, h3 { color: #2c3e50; }
+        .section { margin-bottom: 20px; }
+        .highlight { background-color: #f8f9fa; padding: 15px; border-left: 5px solid #2980b9; }
+    </style>
+</head>
+<body>
+    <h1>Product Requirements Document (PRD)</h1>
+    <h2>Stock Market Dashboard V2</h2>
+
+    <div class="section">
+        <h3>1. Overview</h3>
+        <p>The Stock Market Dashboard V2 is an enhanced web-based application designed to offer users a comprehensive and interactive way to track stock market trends. The system provides real-time and historical stock data with new visualization tools, improved performance, and an upgraded user experience.</p>
+    </div>
+
+    <div class="section">
+        <h3>2. New Features</h3>
+        <ul>
+            <li><strong>Progress Tracking System:</strong> A real-time progress bar with status updates enhances the user experience by providing visibility into data retrieval processes.</li>
+            <li><strong>Advanced Data Visualization:</strong> Integrates Matplotlib for enhanced stock trend visualizations with more customization options.</li>
+            <li><strong>Performance Optimization:</strong> Implements intelligent caching to minimize redundant API calls, reducing latency. File storage efficiency has been enhanced by structuring data to load asynchronously, improving speed and responsiveness.</li>
+            <li><strong>User Experience Enhancements:</strong> The UI has been redesigned to include interactive navigation features, tooltips for stock insights, and streamlined data presentation for better usability and engagement.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>3. Core Features</h3>
+        <ul>
+            <li><strong>Stock Selection:</strong> Users can track a default set of popular stocks (AAPL, MSFT, GOOGL, AMZN, TSLA, NVDA) or add custom stocks.</li>
+            <li><strong>Data Storage:</strong> Retrieves and saves stock data in JSON format, minimizing redundant API calls.</li>
+            <li><strong>Stock Data Fetching:</strong> Utilizes Yahoo Finance API to fetch up-to-date stock data, including price movements and trading volume.</li>
+            <li><strong>Graphical Visualization:</strong> Displays interactive stock price trends using both Streamlit charts and Matplotlib.</li>
+            <li><strong>Summary Statistics:</strong> Key financial metrics such as high, low, and moving averages are available for each stock.</li>
+            <li><strong>Automated Updates:</strong> Periodic data refresh ensures users have access to the latest market trends.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>4. Technical Stack</h3>
+        <ul>
+            <li><strong>Frontend:</strong> Streamlit - Enables real-time UI interactions and data visualization.</li>
+            <li><strong>Backend:</strong> Python - Facilitates data retrieval, processing, and storage.</li>
+            <li><strong>Data Source:</strong> Yahoo Finance API - The primary provider of stock market data.</li>
+            <li><strong>Visualization:</strong> Matplotlib - Adds advanced plotting capabilities for stock analysis.</li>
+            <li><strong>Storage:</strong> JSON files - Used for local data persistence.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>5. User Workflow</h3>
+        <ol>
+            <li>User opens the Stock Market Dashboard V2.</li>
+            <li>Searches for a stock by entering its ticker symbol or selects from the default list.</li>
+            <li>A real-time progress bar updates as the system retrieves stock market data.</li>
+            <li>Stock performance is displayed using interactive charts and detailed numerical statistics.</li>
+            <li>The user can refresh the data for updated stock trends.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h3>6. Future Enhancements</h3>
+        <ul>
+            <li><strong>AI-driven Stock Insights:</strong> Implement machine learning models to provide predictive analytics and personalized stock recommendations.</li>
+            <li><strong>Portfolio Management:</strong> Allow users to create and track a virtual investment portfolio.</li>
+            <li><strong>Real-time Financial News:</strong> Integrate financial news updates relevant to tracked stocks.</li>
+        </ul>
+    </div>
+</body>
+</html>
