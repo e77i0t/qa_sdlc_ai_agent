@@ -209,7 +209,6 @@ If you encounter problems:
 - Check log messages in the terminal where Streamlit is running
 - Look for error messages in the Streamlit interface
 - If using Docker, check logs with `docker logs prd-analysis-suite`
-- Contact the project maintainer at: [your-email@example.com]
 
 ---
 
