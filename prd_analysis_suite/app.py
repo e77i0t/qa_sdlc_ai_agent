@@ -43,9 +43,9 @@ def main():
     # Sidebar with navigation
     with st.sidebar:
         st.header("Reqirements: Test Case Creator ")
-        # st.session_state['use_local_llm'] = st.checkbox(
-        #     "Use LM Studio (Local LLM)", value=st.session_state['use_local_llm']
-        # )
+        st.session_state['use_local_llm'] = st.checkbox(
+            "Use LM Studio (Local LLM)", value=st.session_state['use_local_llm']
+        )
         st.session_state['client'] = get_llm_client(st.session_state['use_local_llm'])
 
         # Navigation section

@@ -1,3 +1,6 @@
+#Application Files
+prd_analysis_suite/cache/*.pkl
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

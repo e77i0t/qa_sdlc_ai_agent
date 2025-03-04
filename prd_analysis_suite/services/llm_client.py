@@ -19,7 +19,7 @@ def get_llm_client(use_local: bool) -> OpenAI:
         OpenAI client instance
     """
     if use_local:
-        return OpenAI(base_url="http://localhost:1234/v1")  # Adjust for LM Studio
+        return OpenAI(base_url="http://host.docker.internal:45310/v1/")  # Adjust for LM Studio
     return OpenAI()
 
 # ----------------------------------------------------------------------
@@ -53,15 +53,37 @@ def perform_llm_analysis(
             st.code(final_prompt)
 
     try:
-        response = client.chat.completions.create(
-            model="gpt-4-turbo",
-            response_format={"type": "json_object"},
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            temperature=0
-        )
+        if st.session_state['use_local_llm']:
+            logger.info('Using Local Phi4 LLM')
+            response = client.chat.completions.create(
+                model="phi4",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                response_format={
+                    "type": "json_schema",
+                    "json_schema": {
+                        "type": "object",
+                        "properties": {
+                            "response": {"type": "string"}
+                        },
+                        "required": ["response"]
+                    }
+                }
+            )
+        else: #ASSUME GPT4
+            logger.info('Using OpenAI GPT4')
+            response = client.chat.completions.create(
+                model="gpt-4-turbo",
+                response_format={"type": "json_object"},
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                temperature=0
+            )
+
 
         analysis_text = response.choices[0].message.content.strip() if response.choices else ""
 
