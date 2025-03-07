@@ -12,7 +12,6 @@ This application helps quality assurance teams and product managers:
 - Generate user stories with acceptance criteria
 - Create test cases from requirements
 - Format test cases in Given-When-Then style
-- Generate BDD (Behavior-Driven Development) test specifications
 
 No coding experience is required to use this tool!
 
